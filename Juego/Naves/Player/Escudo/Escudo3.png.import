@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/player_blue.png-8d41e6ba45e070a75895717e70cb2d49.stex"
+path="res://.import/Escudo3.png-3bb8722d7fe203702ae1a6a278b27a28.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Juego/Naves/Player/player_blue.png"
-dest_files=[ "res://.import/player_blue.png-8d41e6ba45e070a75895717e70cb2d49.stex" ]
+source_file="res://Juego/Naves/Player/Escudo/Escudo3.png"
+dest_files=[ "res://.import/Escudo3.png-3bb8722d7fe203702ae1a6a278b27a28.stex" ]
 
 [params]
 
