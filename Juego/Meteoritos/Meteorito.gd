@@ -42,6 +42,7 @@ func recibir_danio(danio: float) -> void:
 		esta_destruido = true
 		destruir()
 		
+		impacto_sfx.playing
 		animaciones.play("impacto")
 
 func destruir() -> void:

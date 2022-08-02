@@ -84,11 +84,11 @@ func controlador_estados(nuevo_estado: int) -> void:
 			colisionador.set_deferred("disabled", true)
 		ESTADO.MUERTO:
 			colisionador.set_deferred("disabled", true)
-			canion.set_puede_disparar(true)
+			canion.set_puede_disparar(false)
 			Eventos.emit_signal("nave_destruida", global_position)
 			queue_free()
 		_:
-			printerr("ERROR ESTADO")
+			print("ERROR ESTADO")
 	
 	estado_actual = nuevo_estado
 
@@ -130,7 +130,7 @@ func _on_AnimationPlayer_animation_finished(anim_name: String) -> void:
 
 func destruir() -> void:
 	controlador_estados(ESTADO.MUERTO)
-	Eventos.emit_signal("nave_destruida", global_position, 3)
+	Eventos.emit_signal("nave_destruida", self, global_position, 3)
 
 func recibir_danio(danio: float) -> void:
 	hitpoints -= danio

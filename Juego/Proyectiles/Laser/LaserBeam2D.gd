@@ -59,7 +59,6 @@ func set_is_casting(cast: bool) -> void:
 # collision point, whichever is closest.
 func cast_beam(delta: float) -> void:
 	if energia <= 0.0:
-		print("SIN ENERGIA")
 		set_is_casting(false)
 		return
 		
@@ -91,7 +90,6 @@ func appear() -> void:
 		tween.stop_all()
 	tween.interpolate_property(fill, "width", 0, line_width, growth_time * 2)
 	tween.start()
-
 
 func disappear() -> void:
 	if tween.is_active():
