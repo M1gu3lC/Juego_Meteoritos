@@ -34,12 +34,6 @@ numero_peligros = 5
 position = Vector2( -246, 1066 )
 energia = 10.0
 
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( -200, 500 )
-gravity_scale = 0.0
-potencia_rotacion = 300
-hitpoints = 20.0
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource( 3 )
 
@@ -115,5 +109,8 @@ texture = ExtResource( 8 )
 [node name="PurpuraOscuro15" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2( 723, 963 )
 texture = ExtResource( 8 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 544, 1045 )
 
 [connection signal="tween_completed" from="TweenCamara" to="." method="_on_TweenCamara_tween_completed"]
