@@ -20,23 +20,34 @@ explosion = ExtResource( 4 )
 meteorito = ExtResource( 6 )
 explosion_meteorito = ExtResource( 7 )
 sector_meteoritos = ExtResource( 5 )
+enemigo_interceptor = ExtResource( 10 )
 tiempo_transicion_camara = 1.5
 
 [node name="TriggersLluviaMeteoritos" type="Node" parent="."]
 
 [node name="SectorDePeligro" parent="TriggersLluviaMeteoritos" instance=ExtResource( 9 )]
-position = Vector2( 752, 495 )
-tipo_peligro = "Meteorite"
+position = Vector2( 694, 190 )
+tipo_peligro = "Meteorito"
 numero_peligros = 5
 
 [node name="ContenedorEstaciones" type="Node" parent="."]
 
 [node name="EstacionRecarga" parent="ContenedorEstaciones" instance=ExtResource( 12 )]
-position = Vector2( -246, 1066 )
+position = Vector2( -546, 124 )
 energia = 10.0
+
+[node name="TriggersInterceptores" type="Node" parent="."]
+
+[node name="SectorDePeligro" parent="TriggersInterceptores" instance=ExtResource( 9 )]
+position = Vector2( 593, 866 )
+tipo_peligro = "Enemigo"
+numero_peligros = 2
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource( 3 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( -711, 929 )
 
 [node name="CamaraNivel" type="Camera2D" parent="."]
 script = ExtResource( 11 )
@@ -110,11 +121,5 @@ texture = ExtResource( 8 )
 [node name="PurpuraOscuro15" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2( 723, 963 )
 texture = ExtResource( 8 )
-
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 171, 617 )
-
-[node name="EnemigoInterceptor" parent="." instance=ExtResource( 10 )]
-position = Vector2( 473, 790 )
 
 [connection signal="tween_completed" from="TweenCamara" to="." method="_on_TweenCamara_tween_completed"]
